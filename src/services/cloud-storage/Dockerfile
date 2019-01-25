@@ -10,9 +10,8 @@ COPY yarn.lock ./
 RUN yarn
 
 # Bundle app source
-COPY . . 
-#TODO : copy only source files. try multiple files.
-VOLUME /.clocal-gcp
+COPY scripts scripts/
+COPY *.js ./
 
 EXPOSE 8080
 
